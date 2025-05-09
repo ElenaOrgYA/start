@@ -74,15 +74,22 @@ section {
 }
 
 /*flex*/
-.row-flex {
+.row-flex2 {
     max-width: 1700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+.row-flex { display: flex;
+    flex-wrap: wrap;           /* позволяет перенос на новую строку */
+    gap: 10px;                 /* (опционально) отступы между элементами */
+}
 
+.flex-item {
+    flex: 1 1 220px;           /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 220px;}
 .col-flex {
-    max-width: 1700px;
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
 }
@@ -238,6 +245,7 @@ section {
 
 .form_banner_img {
    margin: 0 auto;
+    align-items:baseline;
 
 }
 
@@ -262,4 +270,26 @@ color: #ffffff;
 .col2{width: 100%;
     max-width: 1340px;
     text-align: start;
+   }
+.col{padding: 20px 17px;}
+
+
+.block_baseline{display: flex; align-items:baseline;}
+/*figure*/
+.figure{
+margin: 0 auto;}
+.figure_img{}
+ .figure_img:hover{ transition: padding-top; }
+figcaption{font-size: 20px;
+text-align: center;
+padding-top: 20px;}
+
+/*cards*/
+.cards{
 }
+.cards_title{font-size: 20px;
+color: white;
+}
+.cards_text{font-size: 14px;
+color: white;
+   }
