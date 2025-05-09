@@ -74,18 +74,24 @@ section {
 }
 
 /*flex*/
-.row-flex {
+.row-flex2 {
     max-width: 1700px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+.row-flex { display: flex;
+    flex-wrap: wrap;           /* позволяет перенос на новую строку */
+    gap: 10px;                 /* (опционально) отступы между элементами */
+}
 
+.flex-item {
+    flex: 1 1 220px;           /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 220px;}
 .col-flex {
-
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 /*heder*/
@@ -231,7 +237,7 @@ section {
 .form_banner {
     background-color: #0A2B86;
     width: 100%;
-    max-width: 1540px;
+    max-width: 1700px;
     height: 100%;
     max-height: 190px;
     margin: 0 auto;
@@ -279,8 +285,7 @@ text-align: center;
 padding-top: 20px;}
 
 /*cards*/
-.cards{display: flex;
-flex-direction: column;
+.cards{
 }
 .cards_title{font-size: 20px;
 color: white;
