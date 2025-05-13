@@ -2,12 +2,13 @@
 body {
     color: #1D1D1D;
     font: 16px Roboto, sans-serif;
-    background-color: #ffffff;
+    font-weight: lighter;
+    background-color: #F8F8F8;
     margin: 0;
 }
 
 header {
-    padding: 20px 0;
+    padding-top: 20px;
     width: 100%;
 }
 
@@ -32,6 +33,7 @@ hr {
     height: 2px;
     width: 100%;
     border: none;
+    opacity: 24%;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -51,14 +53,27 @@ h2 {
 h3 {
     font-size: 20px;
 }
+
+h4 {
+    font-size: 24px;
+}
+
 /*section*/
 
 
 section {
-    padding: 40px 0;
+    padding: 20px 0;
     max-width: 1700px;
     width: 100%;
     margin: 0 auto;
+}
+
+footer {
+    background: #0A122B
+}
+
+.white_section {
+    background-color: white;
 }
 
 .wrapper {
@@ -73,6 +88,32 @@ section {
     margin: 0 auto;
 }
 
+.container_white {
+    width: 100%;
+    max-width: 1540px;
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: #ffffff;
+
+}
+
+.container_mini {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.container_white_223 {
+    width: 100%;
+    max-width: 1540px;
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    height: 223px;
+}
+
+
 /*flex*/
 .row-flex2 {
     max-width: 1700px;
@@ -80,14 +121,39 @@ section {
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.row-flex { display: flex;
-    flex-wrap: wrap;           /* позволяет перенос на новую строку */
-    gap: 10px;                 /* (опционально) отступы между элементами */
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap; /* позволяет перенос на новую строку */
+    gap: 10px; /* (опционально) отступы между элементами */
+    justify-content: space-between;
 }
 
 .flex-item {
-    flex: 1 1 220px;           /* min width = 220px, shrink = 1, grow = 1 */
-    min-width: 220px;}
+    flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 220px;
+    max-width: 250px;
+}
+
+.flex-item_1 {
+    flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 220px;
+    max-width: 300px;
+}
+
+.flex-item_2 {
+    flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 220px;
+    max-width: 1250px;
+}
+
+.flex-item_3 {
+    flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+    min-width: 390px;
+    max-width: 600px;
+    vertical-align: middle;
+}
+
 .col-flex {
     max-width: 1300px;
     display: flex;
@@ -95,6 +161,9 @@ section {
 }
 
 /*heder*/
+header {
+    background-color: #ffffff;
+}
 
 .logo-header {
 }
@@ -119,6 +188,12 @@ section {
 .phone {
     font-size: 20px;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.phone:hover {
+    color: #0A2B86;
+    text-decoration: underline;
 }
 
 .button-header {
@@ -129,6 +204,7 @@ section {
     padding: 5px 25px;
     align-content: center;
     display: inline-block;
+    border-radius: 3px;
 }
 
 .button-header:hover {
@@ -148,9 +224,11 @@ section {
     width: 100%;
     max-width: 1540px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
     justify-content: space-between;
+    padding: 10px 0;
+
+    height: 100%;
+    max-height: 54px;
 
 }
 
@@ -159,6 +237,7 @@ section {
     color: #1D1D1D;
     margin: 0 30px;
     text-decoration: none;
+    vertical-align: middle;
 }
 
 .nav_link:hover {
@@ -171,6 +250,10 @@ section {
     font-size: 12px;
     color: #0A2B86;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     margin: 0 15px;
 }
 
@@ -196,7 +279,7 @@ section {
 
 .banner_intro {
     height: 100%;
-    max-height: 200px;
+
     width: 100%;
     max-width: 1540px;
     margin: 0 auto;
@@ -207,14 +290,20 @@ section {
     font-size: 48px;
     font-weight: 700;
     color: #ffffff;
+    padding: 94px 0 30px 0;
 }
 
 .banner_subtitle {
     font-size: 20px;
     color: #ffffff;
+    padding-bottom: 30px;
 }
 
-.banner_buttom {
+.banner_padding_buttom {
+    padding-bottom: 94px;
+}
+
+.buttom_banner {
     color: white;
     justify-content: center;
     overflow: hidden;
@@ -227,69 +316,449 @@ section {
     text-decoration: none;
 }
 
-.banner_buttom:hover {
+.buttom_banner:hover {
     background-color: #ecbb36;
 }
-
 
 
 /*form_banner*/
 .form_banner {
     background-color: #0A2B86;
-    width: 100%;
-    max-width: 1700px;
-    height: 100%;
-    max-height: 190px;
+    border-radius: 3px;
+    height: 190px;
     margin: 0 auto;
 }
 
 .form_banner_img {
-   margin: 0 auto;
-    align-items:baseline;
+    align-items: baseline;
+    padding: 10px 0;
+}
 
+
+.banner_text {
+    max-width: 1100px;
 }
 
 .form_banner_subtitle {
     color: white;
     font-size: 16px;
-    padding: 20px 0 0 40px;
+    padding: 20px 0 0 0;
 
 
 }
-.form_banner_title{font-size: 40px;
+
+.form_banner_suptitle {
+    color: white;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.form_banner_title {
+    font-size: 40px;
     font-weight: 700;
-color: #ffffff;
-    padding: 10px 40px;
-    }
-.form_button{padding: 0 0 0 40px;}
+    color: #ffffff;
+    padding: 10px 10px 20px 0;
+}
+
+.form_button {
+    padding: 0 0 0 5px;
+
+}
+
+.form_banner_white {
+    background-color: #ffffff;
+    border-radius: 3px;
+    height: 223px;
+    margin: 0 auto;
+}
+
+.form_banner_title_black {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1D1D1D;
+    padding: 40px 10px 0 5px;
+}
+
+.form_banner_subtitle_black {
+    color: #1D1D1D;
+    font-size: 16px;
+    padding: 20px 0 20px 5px;
+}
+
+.girl_top {
+    position: relative;
+    top: -15px;
+    padding-left: 40px;
+}
 
 /*col*/
-.col1{width: 100%;
+.col1 {
+    width: 100%;
     max-width: 280px;
 }
-.col2{width: 100%;
-    max-width: 1340px;
-    text-align: start;
-   }
-.col{padding: 20px 17px;}
+
+.col2 {
+    width: 100%;
+
+}
+
+.col {
+    padding: 20px 28px;
+
+}
 
 
-.block_baseline{display: flex; align-items:baseline;}
-/*figure*/
-.figure{
-margin: 0 auto;}
-.figure_img{}
- .figure_img:hover{ transition: padding-top; }
-figcaption{font-size: 20px;
-text-align: center;
-padding-top: 20px;}
+.block_baseline {
+    display: flex;
+    align-items: baseline;
+}
+
 
 /*cards*/
-.cards{
+.cards {
+    border-radius: 3px;
+    width: 100%;
+    max-width: 366px;
+    transition: transform 0.2s;
 }
-.cards_title{font-size: 20px;
-color: white;
+
+.cards:hover {
+    transform: scale(1.1);
 }
-.cards_text{font-size: 14px;
-color: white;
-   }
+
+.cards_title {
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+.cards_text {
+    font-size: 14px;
+    color: white;
+    padding-left: 10px;
+}
+
+/*tip viz*/
+.tip_viz_txt {
+    font-size: 14px;
+}
+
+.height_200 {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s;
+}
+
+.height_200:hover {
+    transform: scale(1.1);
+}
+
+.text_center {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*riski i slozhnosti*/
+.fon_riski {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(../image/fon_riski.svg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    max-height: 560px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fon_riski_intro {
+    height: 100%;
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+.row-flex-riski {
+    display: flex;
+    flex-wrap: wrap; /* позволяет перенос на новую строку */
+    gap: 10px; /* (опционально) отступы между элементами */
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.riski_intro {
+    display: flex;
+
+    align-self: center;
+    height: fit-content;
+    width: 40%;
+    max-width: 580px;
+    vertical-align: super;
+}
+
+.riski_intro_2 {
+    display: flex;
+    align-self: center;
+    vertical-align: super;
+    width: 59%;
+    gap: 30px;
+}
+
+.risk_big {
+    flex-basis: 10%;
+    align-self: center;
+    flex-grow: 1;
+}
+
+.flex-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+    width: 33%;
+    justify-content: space-between;
+}
+
+.item_1 {
+    display: flex;
+}
+
+.title_riski {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    padding-top: 20px;
+}
+
+.text_riski_24 {
+    color: white;
+    font-size: 24px;
+    position: relative;
+    padding-left: 30px;
+    align-self: center;
+}
+
+.text_riski_16 {
+    color: white;
+    font-size: 16px;
+    position: relative;
+    align-self: center;
+    padding-left: 15px;
+}
+
+.riski_banner {
+    border-radius: 3px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 40px 0 60px 0;
+}
+
+.riski_banner_white {
+    background: #ffffff;
+    border-radius: 3px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*prise*/
+.price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.price_item {
+    background-color: white;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    max-width: 470px;
+
+}
+
+.img_title_price {
+    height: 100%;
+    max-height: 36px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.title_price {
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 10px;
+    vertical-align: super;
+}
+
+.text_price {
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.chek_price {
+    padding: 5px 15px;
+}
+
+.no_img_chek_price {
+    opacity: 0
+}
+
+.no_chek_price {
+    padding: 5px 30px;
+    opacity: 0.3;
+}
+
+.criteria_price {
+    padding: 5px 15px;
+    opacity: 0.3;
+    font-size: 12px;
+}
+
+.btn_price {
+    padding-right: 15px;
+    align-self: end;
+}
+
+.price_price {
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+/*баннеры*/
+.banner_blue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: #0A2B86;
+    border-radius: 3px;
+    height: 100%;
+    max-height: 224px;
+    width: 100%;
+    max-width: 760px;
+}
+
+.banner_yellow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: #ECD636;
+    border-radius: 3px;
+    height: 100%;
+    max-height: 224px;
+    width: 100%;
+    max-width: 760px;
+}
+
+.text_banner_smal {
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    font-weight: lighter;
+}
+
+.text_banner_big {
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.text_banner_yellow_big {
+    font-size: 36px;
+    color: #1D1D1D;
+    font-weight: 700;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 450px;
+}
+
+/*advantage*/
+.advantage {
+    width: 240px;
+    height: 150px;
+    align-content: end;
+
+}
+
+.text_advantage {
+    font-size: 16px;
+    color: white;
+    padding: 15px;
+}
+
+/*карта*/
+.border_radius {
+    border-radius: 3px;
+}
+
+/*футер*/
+.footer_top {
+    padding-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title_footer {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.menu_footer {
+    font-size: 14px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+}
+
+.menu_footer:hover {
+    text-decoration: underline;
+}
+
+.gps_footer {
+    font-size: 14px;
+    font-weight: 100;
+    color: #ECD636;
+    text-decoration: none;
+}
+
+.gps_footer:hover {
+    text-decoration: underline;
+}
+
+.tel_footer {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.tel_footer:hover {
+    text-decoration: underline;
+}
+
+.text_footer {
+    font-size: 14px;
+}
+
+.politca {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.politca:hover {
+    text-decoration: underline;
+}

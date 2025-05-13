@@ -1,11 +1,11 @@
 <svg width="366" height="260" viewBox="0 0 366 260" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <mask id="mask0_118_155" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="366" height="260">
-<rect width="366" height="260" rx="5" fill="white"/>
+<path d="M0 0H366V260H0V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_118_155)">
-<rect x="-169" y="-20" width="535" height="351" fill="url(#pattern0_118_155)"/>
-<rect width="366" height="260" fill="url(#pattern1_118_155)"/>
-<rect width="366" height="260" fill="url(#paint0_linear_118_155)"/>
+<path d="M-169 -20H366V331H-169V-20Z" fill="url(#pattern0_118_155)"/>
+<path d="M0 0H366V260H0V0Z" fill="url(#pattern1_118_155)"/>
+<path d="M0 0H366V260H0V0Z" fill="url(#paint0_linear_118_155)"/>
 </g>
 <defs>
 <pattern id="pattern0_118_155" patternContentUnits="objectBoundingBox" width="1" height="1">
