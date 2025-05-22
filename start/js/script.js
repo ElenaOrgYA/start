@@ -1,9 +1,12 @@
 "use strict";
 
-document.querySelector(`.nav_hamburger`).addEventListener('click', function () {
-    this.classList.toggle('active');
-    document.querySelector(`.nav-flex`).classList.toggle('open');
+let toggleBtn = document.querySelector(".toggleBtn");
+let header = document.querySelector(".header");
+
+toggleBtn.addEventListener("click", () => {
+  header.classList.toggle("active");
 })
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const navElement = document.querySelector('.nav');
