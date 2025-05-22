@@ -37,7 +37,7 @@ document.querySelector(`.nav_hamburger`).addEventListener('click', function () {
 //         }
 //     });
 // });
-
+if (window.innerWidth >= 900) {
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -102,3 +102,6 @@ noneImgSocialElements.forEach(function(element) {
         element.dataset.wasSocial = 'true';
     });
 });
+    document.addEventListener('DOMContentLoaded', function() {
+    });
+}

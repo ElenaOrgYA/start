@@ -5,65 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Start frontend</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100..900;1,100..900"
-          type="text/css">
-
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 </head>
 <body>
 
-<header>
+<header class="header">
 
     <div class="container">
-        <div class="row-flex">
+        <div class="header-flex">
+            <div class="nav_hamburger "><span></span></div>
             <div class="logo-header"><a href="#"><img src="image/logo.png" alt="Визовый центр Европа"></a></div>
-            <div class="address-header">
+            <div class="address-header desktop">
                 <div class="titry"><span>Наш офис</span></div>
                 <div><img src="image/cursor_1.svg" alt=""><span
                         style="color:#C0C0C0; padding-left: 5px">Краснодар</span><span> ул. Старокубанская 92</span>
                 </div>
             </div>
-            <div class="address-header">
+            <div class="address-header desktop">
                 <div class="titry"><span>График работы</span></div>
                 <div class="work"><span>ПН-ПТ 09.00-20.00</span></div>
                 <div class="work"><span>СБ-ВС 09.00-14.00</span></div>
             </div>
             <div class="address-header">
-                <div class="titry"><span>Телефон офиса</span></div>
-                <div><a href="tel:+78612139166" class="phone">+7&nbsp;861&nbsp;213-91-66</a></div>
+                <div class="titry desktop"><span>Телефон офиса</span></div>
+                <div><a href="tel:+78612139166" class="phone"><img src="image/mob_phone.svg" class="mob_phone"> <span class="desktop">+7&nbsp;861&nbsp;213-91-66</span></a></div>
             </div>
-            <div class="address-header">
+            <div class="address-header desktop">
                 <div class="titry"><span>Горячая линия</span></div>
                 <div><a href="tel:+78009001011" class="phone">8&nbsp;800&nbsp;900&nbsp;10&nbsp;11</a></div>
             </div>
-            <div class="button-header">Заказать звонок</div>
+            <div class="button-header desktop">Заказать звонок</div>
         </div>
     </div>
-    <hr>
-    <div class="nav">
-    <div class="container">
+    <hr class="desktop">
+        <div class="nav ">
+            <div class="container  ">
     <nav class="nav-flex">
-        <div class="logo-header none"><a href="#"><img src="image/logo.png" alt="Визовый центр Европа"></a></div>
-            <div><a class="nav_link" href="#">Страны</a></div>
-            <div><a class="nav_link" href="#">Услуги</a></div>
-            <div><a class="nav_link" href="#">О нас</a></div>
-            <div><a class="nav_link" href="#">Блог</a></div>
-            <div><a class="nav_link" href="#">Контакты</a></div>
-            <div><a class="nav_link" href="#">Связаться по видеочату</a></div>
-            <div class="social">
-                <div><span>Мы в социальных сетях:</span></div>
-                <div><a href="#"> <img class="social_img" src="image/soc_1.svg" alt=""></a></div>
-                <div><a href="#"> <img class="social_img" src="image/soc_2.svg" alt=""></a></div>
-                <div><a href="#"> <img class="social_img" src="image/soc_3.svg" alt=""></a></div>
-                <div><a href="#"> <img class="social_img" src="image/soc_4.svg" alt=""></a></div>
-            </div>
+        <div class="logo-header none"><a href="#"><img src="image/logo.png" alt="Визовый центр Европа"></a>
+        </div>
+        <div class="mobile-nav" >
+            <ul class="nav_list">
+                <li><a class="nav_link1" href="#">Страны</a>
+                    <ul class="nav_sub nav_vert">
+                        <li class="nav_li"><a href="#" class="nav_link2 ">США, Канада</a>
+                            <ul class="nav_sub nav_vert">
+                                <li class="nav_li"><a href="#" class="nav_link3">Бла</a></li>
+                                <li class="nav_li"><a href="#" class="nav_link3">БЛА Бла</a></li>
+                                <li class="nav_li"><a href="#" class="nav_link3">БЛА БлаБЛА Бла</a></li>
+                                <li class="nav_li"><a href="#" class="nav_link3">БЛА БлаБЛА БлаБЛА Бла</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Европа</a></li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Азия</a></li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Страны Шенгенского соглашения</a></li>
+
+                    </ul>
+                </li>
+                <li><a class="nav_link" href="#">Услуги</a>
+                    <ul class="nav_sub nav_vert">
+                        <li class="nav_li"><a href="#" class="nav_link2 ">США, Канада</a>
+
+                        </li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Европа</a></li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Азия</a></li>
+                        <li class="nav_li"><a href="#" class="nav_link2">Страны Шенгенского соглашения</a></li>
+
+                    </ul>
+                </li>
+                <li><a class="nav_link" href="#">О нас</a></li>
+                <li><a class="nav_link" href="#">Блог</a></li>
+                <li><a class="nav_link" href="#">Контакты</a></li>
+                <li><a class="nav_link" href="#">Связаться по видеочату</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <div><span>Мы в социальных сетях:</span></div>
+            <div><a href="#"> <img class="social_img" src="image/soc_1.svg" alt=""></a></div>
+            <div><a href="#"> <img class="social_img" src="image/soc_2.svg" alt=""></a></div>
+            <div><a href="#"> <img class="social_img" src="image/soc_3.svg" alt=""></a></div>
+            <div><a href="#"> <img class="social_img" src="image/soc_4.svg" alt=""></a></div>
+        </div>
         <div class="button-header none">Заказать звонок</div>
 
     </nav>
-    </div></div>
-    <div class="nav_hamburger"><span></span></div>
+            </div>
+        </div>
+
 
 
 </header>
@@ -581,6 +608,7 @@
         </div>
     </div>
 </section>
+
 <footer>
     <section>
         <div class="container">
