@@ -5,38 +5,7 @@ document.querySelector(`.nav_hamburger`).addEventListener('click', function () {
     document.querySelector(`.nav-flex`).classList.toggle('open');
 })
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navElement = document.querySelector('.nav');
-//     const noneElements = document.querySelectorAll('.none');
-//
-//
-//     window.addEventListener('scroll', function() {
-//         if (window.scrollY > 50) {
-//             // Меняем класс nav на scroll2
-//             if (navElement) {
-//                 navElement.classList.remove('nav');
-//                 navElement.classList.add('scroll2');
-//             }
-//
-//             // Меняем все классы none на open
-//             noneElements.forEach(element => {
-//                 element.classList.remove('none');
-//                 element.classList.add('open');
-//             });
-//         } else {
-//             // Возвращаем обратно, если прокрутка меньше 50px
-//             if (navElement) {
-//                 navElement.classList.remove('scroll2');
-//                 navElement.classList.add('nav');
-//             }
-//
-//             noneElements.forEach(element => {
-//                 element.classList.remove('open');
-//                 element.classList.add('none');
-//             });
-//         }
-//     });
-// });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
