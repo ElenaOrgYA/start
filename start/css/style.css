@@ -250,17 +250,21 @@ header {
 
 .nav_ul li {
     position: relative;
+
 }
+
 .nav_ul li:focus-within > .sub_ul,
 .nav_ul li:hover > .sub_ul,
 .nav_ul li:focus-within > .sub_ul2,
-.nav_ul li:hover > .sub_ul2{
-   /*display: flex;*/
+.nav_ul li:hover > .sub_ul2 {
+    /*display: flex;*/
     clip: auto;
     height: auto;
     width: auto;
     margin: 0;
-}
+    opacity: 1;
+    }
+
 
 .sub_ul {
     /*display: none;*/
@@ -272,8 +276,10 @@ header {
     height: 1px;
     width: 1px;
     margin: -1px;
-
+    opacity: 0;
+     transition: 0.3s;
 }
+
 .sub_ul2 {
     /*display: none;*/
     flex-direction: column;
@@ -283,9 +289,12 @@ header {
     clip: rect(0 0 0 0);
     height: 1px;
     width: 1px;
-   margin: -1px;
+    margin: -1px;
     top: 0;
     left: 100%;
+    transition: 0.3s;
+    opacity: 0;
+
 }
 
 .li2 {
@@ -293,8 +302,10 @@ header {
     list-style: none;
     padding: 10px 0;
 }
+
 .li2:hover {
     background-color: rgba(10, 43, 134, 0.2);
+
 }
 
 
@@ -318,13 +329,15 @@ header {
     color: #1D1D1D;
     text-decoration: none;
     vertical-align: middle;
+    transition: transform 0.2s ease-in-out;
 }
-
+li:hover > a,
 .nav_link:hover {
     /*background-color: rgba(10, 43, 134, 0.2);*/
     color: #0A2B86;
     text-decoration: #0A2B86 solid 2px;
 }
+
 
 .nav_link2 {
     padding: 10px 3em;
@@ -339,17 +352,38 @@ header {
     color: #0A2B86;
     text-decoration: #0A2B86 solid 2px;
 }
+
 @media (max-width: 900px) {
-    .menu--vert{
+    .menu--vert {
         flex-direction: column;
         width: 100%;
-        background-color:#ffffff;
+        background-color: #ffffff;
     }
-    .menu--vert .sub_ul{
+
+    .menu--vert .sub_ul {
         top: 0;
         left: 100%;
     }
 
+}
+
+.caret {
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease-in-out;
+
+}
+li:hover .caret,
+.nav_link:hover .caret {
+    transform: rotate(0deg);
 }
 
 .social {
