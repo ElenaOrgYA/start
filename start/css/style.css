@@ -252,7 +252,7 @@ header {
     position: relative;
 }
 .nav_ul li:focus-within > .sub_ul,
-.nav_ul li:hover > .sub_ul
+.nav_ul li:hover > .sub_ul,
 .nav_ul li:focus-within > .sub_ul2,
 .nav_ul li:hover > .sub_ul2{
    /*display: flex;*/
