@@ -1,12 +1,5 @@
 "use strict";
 
-document.querySelector(`.nav_hamburger`).addEventListener('click', function () {
-    this.classList.toggle('active');
-    document.querySelector(`.nav-flex`).classList.toggle('open');
-})
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
