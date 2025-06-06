@@ -64,3 +64,11 @@ noneImgSocialElements.forEach(function(element) {
         element.dataset.wasSocial = 'true';
     });
 });
+
+let toggleBtn = document.querySelector(".toggleBtn");
+let nav_m = document.querySelector(".nav_m");
+
+toggleBtn.addEventListener("click", () => {
+    nav_m.classList.toggle("active");
+})
+

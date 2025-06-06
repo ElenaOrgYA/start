@@ -7,6 +7,13 @@ body {
     margin: 0;
 }
 
+@media (max-width: 1180px) {
+    body {
+        font-size: 12px;
+    }
+
+}
+
 header {
     padding-top: 20px;
     width: 100%;
@@ -114,6 +121,36 @@ footer {
     height: 223px;
 }
 
+@media (max-width: 1440px) {
+    .container_white_223,
+    .container_white,
+    .container,
+    .wrapper,
+    section {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .container_mini {
+        padding: 30px 15px;
+    }
+}
+
+
+
+@media (max-width: 1180px) {
+    .container_white_223,
+    .container_white,
+    .wrapper, .scroll2, .container_mini,
+    section, header, footer {
+        width: 100%;
+        max-width: 1020px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
 
 /*flex*/
 .row-flex2 {
@@ -123,14 +160,14 @@ footer {
     justify-content: space-between;
 }
 
-.row-flex {
+.row-flex, .row-flex-footer {
     display: flex;
     flex-wrap: wrap; /* позволяет перенос на новую строку */
     gap: 10px; /* (опционально) отступы между элементами */
     justify-content: space-between;
 }
 
-.flex-item {
+.flex-item, .item_tip_viz {
     flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
     min-width: 220px;
     max-width: 250px;
@@ -161,6 +198,22 @@ footer {
     flex-direction: column;
 }
 
+.row-gap-40 {
+
+}
+
+@media (max-width: 1440px) {
+    .row-flex, .row-flex2, .row-flex-footer {
+        width: 100%;
+        max-width: 1400px;
+        justify-content: space-around;
+
+    }
+
+}
+
+
+
 /*heder*/
 header {
     background-color: #ffffff;
@@ -174,6 +227,7 @@ header {
     flex-direction: column;
     font-size: 14px;
     margin: 0 15px;
+    text-align: end;
 }
 
 .titry {
@@ -211,12 +265,18 @@ header {
 .button-header:hover {
     color: #1D1D1D;
     background-color: #ecbb36;
-    border: none;
-    height: 26px;
-    padding: 5px 25px;
-    align-content: center;
-    display: inline-block;
 }
+
+@media (max-width: 1440px) {
+
+
+    .container {
+        max-width: 1440px;
+        padding: 0 15px;
+    }
+
+}
+
 
 /* nav */
 .nav {
@@ -263,7 +323,7 @@ header {
     width: auto;
     margin: 0;
     opacity: 1;
-    }
+}
 
 
 .sub_ul {
@@ -277,7 +337,7 @@ header {
     width: 1px;
     margin: -1px;
     opacity: 0;
-     transition: 0.3s;
+    transition: 0.3s;
 }
 
 .sub_ul2 {
@@ -331,6 +391,7 @@ header {
     vertical-align: middle;
     transition: transform 0.2s ease-in-out;
 }
+
 li:hover > a,
 .nav_link:hover {
     /*background-color: rgba(10, 43, 134, 0.2);*/
@@ -353,21 +414,6 @@ li:hover > a,
     text-decoration: #0A2B86 solid 2px;
 }
 
-@media (max-width: 900px) {
-    .desktop{display: none;}
-    .menu--vert {
-        flex-direction: column;
-        width: 100%;
-        background-color: #ffffff;
-    }
-
-    .menu--vert .sub_ul {
-        top: 0;
-        left: 100%;
-    }
-
-}
-
 .caret {
 
     display: inline-block;
@@ -382,6 +428,7 @@ li:hover > a,
     transition: transform 0.2s ease-in-out;
 
 }
+
 li:hover .caret,
 .nav_link:hover .caret {
     transform: rotate(0deg);
@@ -404,57 +451,92 @@ li:hover .caret,
     margin: 0 5px;
 }
 
+.social_img_mobile {
+    display: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    /*margin: 0 5px;*/
+}
+
+
+.social_mobile {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
 
 
 .none, .none1, .none2 {
     display: none;
 }
 
-@media (max-width: 900px) {
+.mobile_nav, .mobile_nav_header {
+    display: none;
+}
+
+@media (max-width: 1440px) {
+    .nav, .scroll2 {
+        max-width: 1440px;
+    }
 
     .nav-flex {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        max-height: 500px;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        background-color:#ffffff;
-        animation: fadeIn 1s;
-        padding-top: 50px;
+        max-width: 1440px;
+        justify-content: space-around;
     }
 
-    /*.nav-flex div {*/
-    /*    flex-direction: column;*/
-    /*    row-gap: 30px;*/
-    /*}*/
-    .nav_ul {flex-direction: column;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    }
-    .social {
-        display: flex;
-        flex-direction: row;
+    .nav_link {
+        padding: 30px 2em;
     }
 
-    .social div {
-        flex-direction: row;
-        row-gap: 20px;
+}
+
+@media (max-width: 1152px) {
+    .nav_link {
+        padding: 20px 1em;
+        font-size: 14px;
     }
 
-    .open {
-        display: flex;
-    !important;
+    .nav, .scroll2 {
+        max-width: 1152px;
     }
+
+    .nav-flex {
+        max-width: 1152px;
+        justify-content: space-around;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .nav_link {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    .nav, .scroll2 {
+        max-width: 1020px;
+    }
+
+    .nav-flex {
+        max-width: 950px;
+        justify-content: space-around;
+        font-size: 14px;
+    }
+
+
+}
+
+
+.flex_m {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 15px;
+    align-items: center;
 }
 
 
@@ -508,10 +590,43 @@ li:hover .caret,
     padding: 5px 25px;
     align-content: center;
     text-decoration: none;
+    border-radius: 3px;
 }
 
 .buttom_banner:hover {
     background-color: #ecbb36;
+}
+
+@media (max-width: 1440px) {
+    .banner {
+        max-height: 310px;
+        height: 100%;
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .banner_intro {
+        height: 100%;
+
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .banner_title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #ffffff;
+        padding: 94px 0 30px 15px;
+    }
+
+    .banner_subtitle {
+        padding-left: 15px;
+    }
+
+    .banner_padding_buttom {
+        padding-left: 15px;
+    }
+
 }
 
 
@@ -585,6 +700,20 @@ li:hover .caret,
     padding-left: 40px;
 }
 
+@media (max-width: 1440px) {
+    .form_banner_title {
+        font-size: 34px;
+    }
+
+    .form_banner {
+        margin: 0;
+        max-width: 1400px;
+    }
+}
+
+
+
+
 /*col*/
 .col1 {
     width: 100%;
@@ -596,9 +725,15 @@ li:hover .caret,
 
 }
 
-.col {
+.col, .col_anketa {
     padding: 20px 28px;
 
+}
+
+.img_anketa {
+    position: relative;
+    top: -50px;
+    padding-right: 30px;
 }
 
 
@@ -632,10 +767,25 @@ li:hover .caret,
     padding-left: 10px;
 }
 
+@media (max-width: 1440px) {
+    .cards {
+        max-width: 340px;
+    }
+
+}
+
+
+
+
 /*tip viz*/
 .tip_viz_txt {
     font-size: 14px;
 }
+
+.tip_viz_img {
+
+}
+
 
 .height_200 {
     height: 200px;
@@ -652,6 +802,17 @@ li:hover .caret,
 .text_center {
     text-align: center;
     padding-top: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .height_200 {
+        height: 130px;
+    }
+
+    .tip_viz_img {
+        max-width: 160px;
+    }
 }
 
 /*riski i slozhnosti*/
@@ -760,12 +921,58 @@ li:hover .caret,
     align-items: center;
 }
 
+.riski_text {
+    font-size: 28px;
+}
+
+@media (max-width: 1440px) {
+    .fon_riski_intro {
+        max-width: 1440px;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .riski_banner {
+        max-width: 1410px;
+    }
+
+    .riski_text {
+        font-size: 24px;
+    }
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .fon_riski_intro {
+        max-width: 1010px;
+    }
+
+    .row-flex-riski {
+        gap: 0px;
+        max-width: 950px;
+    }
+
+    .text_riski_24 {
+
+        padding-left: 10px;
+
+    }
+
+    .riski_banner {
+        max-width: 950px;
+    }
+}
+
 /*prise*/
 .price {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     gap: 10px;
+
 }
 
 .price_item {
@@ -826,6 +1033,13 @@ li:hover .caret,
     padding-left: 15px;
 }
 
+.price_old {
+    font-size: 24px;
+    opacity: 0.3;
+    text-decoration-line: line-through;
+}
+
+
 /*баннеры*/
 .banner_blue {
     display: flex;
@@ -876,6 +1090,39 @@ li:hover .caret,
     max-width: 450px;
 }
 
+.padding_yellow_banner {
+    padding: 20px 0 20px 28px;
+}
+
+.img_blue_banner {
+
+    position: relative;
+    top: -19px;
+}
+
+.img_yellow_banner {
+    position: relative;
+    top: -9px;
+}
+
+@media (max-width: 1440px) {
+    .banner_blue,
+    .banner_yellow {
+        max-width: 690px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 380px;
+        font-size: 30px;
+    }
+
+    .padding_yellow_banner {
+        padding: 44px 0 20px 28px;
+    }
+}
+
+
+
 /*advantage*/
 .advantage {
     width: 240px;
@@ -890,10 +1137,21 @@ li:hover .caret,
     padding: 15px;
 }
 
+@media (max-width: 1440px) {
+    .advantage {
+        width: 225px;
+    }
+
+}
+
+
+
+
 /*карта*/
 .border_radius {
     border-radius: 3px;
 }
+
 
 /*футер*/
 .footer_top {
@@ -947,12 +1205,1373 @@ li:hover .caret,
     font-size: 14px;
 }
 
-.politca {
+.politica {
     font-size: 14px;
     color: white;
     text-decoration: none;
 }
 
-.politca:hover {
+.politica:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+    .border_radius {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 1367px) {
+    .cards {
+        max-width: 330px;
+    }
+
+    .form_banner_title {
+        font-size: 32px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 670px;
+    }
+
+    .col {
+        padding: 20px 23px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 362px;
+        font-size: 28px;
+    }
+
+    .advantage {
+        width: 215px;
+    }
+
+    .border_radius {
+        max-width: 1330px;
+    }
+
+}
+
+@media (max-width: 1281px) {
+    .cards {
+        max-width: 300px;
+    }
+    .tip_viz_img {
+        max-width: 220px;
+    }
+    .form_banner_title {
+        font-size: 30px;
+    }
+
+    .form_banner {
+        margin: 0;
+        max-width: 1240px;
+    }
+
+    .girl_top {
+
+        padding-left: 10px;
+    }
+
+    .form_banner_white {
+        max-width: 1265px;
+        margin: 0;
+    }
+    .riski_text {
+        font-size: 20px;
+    }
+
+    .text_riski_24 {
+        font-size: 20px;
+    }
+
+    .text_riski_16 {
+        font-size: 14px;
+    }
+
+    .riski_banner {
+        max-width: 1250px;
+    }
+    .price_item {
+        padding: 15px 0;
+        max-width: 400px;
+    }
+
+    .price {
+        gap: 5px;
+        max-width: 1240px;
+    }
+    .banner_blue,
+    .banner_yellow {
+        max-width: 615px;
+    }
+
+    .text_banner_smal {
+        font-size: 14px;
+    }
+
+    .text_banner_big {
+        font-size: 46px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 306px;
+        font-size: 28px;
+    }
+
+    .padding_yellow_banner {
+        padding: 14px 0 20px 28px;
+    }
+    .advantage {
+        width: 190px;
+    }
+    .border_radius {
+        max-width: 1240px;
+    }
+    .container_white_223,
+    .container_white,
+    .wrapper, .scroll2,
+    section {
+        width: 100%;
+        max-width: 1280px;
+    }
+    .row-flex, .row-flex2, .row-flex-footer {
+        width: 100%;
+        max-width: 1240px;
+        justify-content: space-around;
+
+    }
+
+    .flex-item, .item_tip_viz {
+        flex: 1 1 220px; /* min width = 220px, shrink = 1, grow = 1 */
+        min-width: 200px;
+        max-width: 220px;
+    }
+
+    .flex-item_1 {
+        flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+        min-width: 220px;
+        max-width: 270px;
+    }
+
+    .flex-item_2 {
+        flex: 1 1 250px; /* min width = 220px, shrink = 1, grow = 1 */
+        min-width: 220px;
+        max-width: 900px;
+    }
+    .container {
+        max-width: 1280px;
+        padding: 0 15px;
+    }
+    .nav, .scroll2 {
+        max-width: 1280px;
+    }
+
+    .nav-flex {
+        max-width: 1280px;
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 1181px) {
+    .row-flex, .row-flex2, .row-flex-footer {
+        width: 100%;
+        max-width: 1150px;
+        justify-content: space-around;
+        gap: 0;
+        margin: 0 auto;
+
+    }
+
+    .container_white_223,
+    .container_white,
+    .wrapper, .scroll2, .container_mini, section, header, footer {
+        width: 100%;
+        max-width: 1180px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .row-gap-40 {
+        row-gap: 40px;
+        column-gap: 10px;
+    }
+
+    .container {
+        max-width: 1180px;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        padding-left: 15px;
+    }
+
+    .address-header {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin: 0 2px;
+        max-width: 160px;
+    }
+
+    .phone {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .button-header {
+        padding: 5px 10px;
+    }
+
+    .banner {
+        max-width: 1180px;
+    }
+
+    .banner_intro {
+
+        max-width: 1024px;
+    }
+
+    .banner_title {
+        font-size: 40px;
+        font-weight: 700;
+        color: #ffffff;
+        padding: 94px 0 30px 15px;
+    }
+
+    .banner_subtitle {
+        padding-left: 15px;
+    }
+
+    .banner_padding_buttom {
+        padding-left: 15px;
+    }
+
+    .flex-item, .item_tip_viz {
+        flex: 1 1 160px; /* min width = 220px, shrink = 1, grow = 1 */
+        min-width: 150px;
+        max-width: 160px;
+    }
+
+    .advantage {
+        width: 180px;
+    }
+
+    .border_radius {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .nav, {
+        max-width: 1150px;
+    }
+
+    .nav-flex {
+        max-width: 1140px;
+        justify-content: space-around;
+    }
+
+    .scroll2 {
+        max-width: 1180px;
+    }
+
+    .text_footer {
+        font-size: 12px;
+    }
+
+    .politica {
+        font-size: 11px;
+    }
+
+    .tel_footer, .title_footer {
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+    .menu_footer {
+        font-size: 12px;
+
+    }
+
+    .form_banner_title {
+        font-size: 22px;
+    }
+
+    .form_banner {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .girl_top {
+
+        padding-left: 10px;
+    }
+
+    .col {
+        padding: 10px 10px;
+        max-width: 300px;
+
+    }
+
+    .form_banner_white {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .cards {
+        width: 270px;
+    }
+
+    .cards_text {
+        font-size: 11px;
+        padding-left: 5px;
+    }
+
+    .height_200 {
+        height: 150px;
+    }
+
+    .tip_viz_img {
+        max-width: 160px;
+    }
+
+    .fon_riski_intro {
+        max-width: 1024px;
+    }
+
+    .text_riski_24 {
+        font-size: 16px;
+    }
+
+    .text_riski_16 {
+        font-size: 12px;
+    }
+
+    .row-flex-riski {
+        gap: 0px;
+    }
+
+    .riski_intro {
+        width: 40%;
+        max-width: 400px;
+
+    }
+
+    .riski_intro_2 {
+
+        gap: 20px;
+    }
+
+    .riski_text {
+        font-size: 16px;
+    }
+
+    .riski_banner {
+        max-width: 1110px;
+    }
+
+    .price_item {
+        padding: 5px 0;
+        max-width: 360px;
+    }
+
+    .price {
+        gap: 5px;
+        max-width: 1120px;
+        margin: 0 auto;
+
+    }
+
+    .text_price {
+        font-size: 12px;
+    }
+
+    .criteria_price {
+        font-size: 10px;
+    }
+
+
+    .price_price {
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 15px;
+    }
+
+    .price_old {
+        font-size: 15px;
+    }
+
+    .chek_price {
+        padding: 5px 5px;
+    }
+
+    .no_chek_price {
+        padding: 5px 20px;
+
+
+    }
+
+    .banner_blue,
+    .banner_yellow {
+        max-width: 545px;
+        height: 182px;
+    }
+
+    .text_banner_big {
+        font-size: 36px;
+    }
+
+    .img_blue_banner {
+        max-width: 200px;
+        top: 3px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 300px;
+        font-size: 24px;
+    }
+
+    .padding_yellow_banner {
+        padding: 14px 0 15px 10px;
+    }
+
+    .img_yellow_banner {
+        top: 10px;
+        max-width: 200px;
+    }
+
+}
+
+@media (max-width: 1041px) {
+    .cards {
+        width: 350px;
+    }
+
+    .row-gap-40 {
+        row-gap: 40px;
+        column-gap: 30px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 500px;
+        height: 182px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 280px;
+        font-size: 22px;
+    }
+
+    .advantage {
+        width: 250px;
+    }
+
+    .border_radius {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .politica {
+        font-size: 11px;
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 933px) {
+    .nav_m {
+        width: 100%;
+        max-width: 1000px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: #ffffff;
+        z-index: 100;
+    }
+
+    .mobile_nav_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+
+    .mobile_nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: #ffffff;
+        flex-direction: column;
+    }
+
+    .nav_m.active .mobile_nav {
+        display: block;
+        overflow: auto;
+        max-height: 100vh;
+    }
+
+    .nav_ul li {
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    .nav_ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+        display: none;
+        top: 0;
+
+    }
+
+    .nav_ul li:hover ul {
+        display: block;
+    }
+
+    .nav_ul li:hover .sub_ul {
+        /*background: rgba(10, 43, 134, 0.2);*/
+        display: block;
+        padding: 0;
+    }
+
+    .li2:hover {
+        background-color: #ffffff;
+
+    }
+
+
+    .nav_ul li:hover .sub_ul2 {
+        background: #ffffff;
+        display: block;
+        padding: 0;
+    }
+
+    .sub_ul, .sub_ul2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav_ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .nav_link {
+        padding: 1em;
+
+    }
+
+    .social {
+        display: none;
+    }
+
+    .social_m {
+        color: #0A2B86;
+        text-align: center;
+    }
+
+    .address-header {
+        padding: 1em;
+        margin: 0;
+        text-align: start;
+    }
+
+    .open {
+        display: flex;
+    !important;
+    }
+
+    .nav_m .toggleBtn {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .text_banner_big {
+        font-size: 30px;
+    }
+
+    .nav_m .toggleBtn::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #0A2B86;
+        transform: translateY(-10px);
+        box-shadow: 0 10px #0A2B86;
+        transition: 0.3s;
+    }
+
+    .nav_m .toggleBtn::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #0A2B86;
+        transform: translateY(10px);
+        transition: 0.3s;
+    }
+
+    .nav_m.active .toggleBtn::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    .nav_m.active .toggleBtn::after {
+        transform: rotate(-45deg);
+
+    }
+
+    .row-flex, .row-flex2, .row-flex-footer {
+        max-width: 900px;
+    }
+
+    .form_banner {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .form_banner_title {
+        font-size: 20px;
+    }
+
+
+    .form_banner_title_black {
+        font-size: 40px;
+        font-weight: 700;
+        color: #1D1D1D;
+        padding: 10px 10px 0 5px;
+    }
+
+    .flex-item_2 {
+        max-width: 600px;
+    }
+
+    .row-flex-riski {
+        gap: 0px;
+        max-width: 820px;
+    }
+
+    .riski_intro_img {
+        height: 160px;
+    }
+
+    .riski_text {
+        font-size: 14px;
+    }
+
+    .price_old {
+        font-size: 12px;
+    }
+
+    .no_chek_price {
+        padding: 5px 15px;
+    }
+
+    .price_price {
+        padding-left: 5px;
+    }
+
+    .criteria_price {
+        padding: 5px 5px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 440px;
+        height: 182px;
+    }
+
+    .col {
+        max-width: 200px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 215px;
+    }
+
+    .border_radius {
+        max-width: 880px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .social_img_mobile {
+        display: block;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .social_mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        font-size: 12px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 885px) {
+    .container {
+        max-width: 850px;
+    }
+
+    .row-flex, .row-flex2, .row-flex-footer {
+        max-width: 850px;
+    }
+
+    .form_banner_title {
+        font-size: 18px;
+    }
+
+    .fon_riski_intro {
+        max-width: 850px;
+    }
+
+    .row-flex-riski {
+        gap: 0px;
+        max-width: 750px;
+    }
+
+    .text_riski_24 {
+        font-size: 14px;
+    }
+
+    .riski_intro_img {
+        height: 135px;
+    }
+
+    .text_riski_16 {
+        font-size: 10px;
+    }
+
+    .riski_banner_white {
+        height: 80px;
+    }
+
+    .riski_text {
+        font-size: 13px;
+    }
+
+    .price {
+        max-width: 850px;
+    }
+
+    .price_item {
+        max-width: 270px;
+    }
+
+    .price_price {
+        font-size: 18px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 400px;
+    }
+
+    .col {
+        max-width: 170px;
+    }
+
+    .text_banner_big {
+        font-size: 22px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 180px;
+        font-size: 18px;
+    }
+
+    .advantage {
+        width: 230px;
+    }
+
+    .border_radius {
+        max-width: 840px;
+    }
+}
+
+@media (max-width: 821px) {
+    .container {
+        max-width: 820px;
+    }
+
+    .form_banner {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    .row-flex, .row-flex2, .row-flex-footer {
+        max-width: 820px;
+    }
+
+    .form_banner_title {
+        font-size: 17px;
+    }
+
+    .flex-col {
+        width: 31%;
+    }
+
+    .border_radius {
+        max-width: 790px;
+    }
+}
+
+@media (max-width: 769px) {
+    .container {
+        max-width: 780px;
+        width: 100%;
+    }
+
+    .flex_m {
+        width: 100%;
+        max-width: 730px;
+    }
+
+    .form_banner {
+        max-width: 720px;
+        margin: 0 auto;
+        height: 160px;
+
+    }
+
+    .row-flex, .row-flex2 {
+        max-width: 690px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .form_banner_title {
+        font-size: 13px;
+    }
+
+    .form_banner_img {
+        align-items: baseline;
+        padding: 10px 0;
+        width: 230px;
+    }
+
+    .container_white_223, .container_white, .wrapper, .scroll2, .container_mini, section, header, footer {
+        width: 100%;
+        max-width: 720px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .flex-item, .item_tip_viz {
+        flex: 1 1 240px;
+        min-width: 200px;
+        max-width: 240px;
+    }
+
+    .tip_viz_img {
+        max-width: 210px;
+    }
+
+    .form_banner_title_black {
+        font-size: 30px;
+    }
+
+    .price {
+        max-width: 690px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .price_item {
+        max-width: 500px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 690px;
+    }
+
+    .col {
+        max-width: 400px;
+    }
+
+    .text_banner_smal {
+        font-size: 16px;
+    }
+
+    .text_banner_big {
+        font-size: 40px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 400px;
+        font-size: 28px;
+    }
+
+    .advantage {
+        width: 185px;
+    }
+
+    .col_anketa {
+        padding: 0px 0px;
+        max-width: 370px;
+    }
+
+    .form_banner_title {
+        font-size: 14px;
+    }
+
+    .form_banner_suptitle {
+        font-size: 22px;
+    }
+
+    .border_radius {
+        max-width: 690px;
+    }
+
+    .footer_top {
+        padding: 30px;
+    }
+
+    .politica {
+        padding-left: 30px;
+    }
+
+    .row-flex-riski {
+        gap: 30px;
+        max-width: 750px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .riski_intro {
+        width: 100%;
+        max-width: 690px;
+    }
+
+    .riski_intro_2 {
+        gap: 20px;
+
+        max-width: 690px;
+        width: 100%;
+    }
+
+    .riski_intro_img {
+        height: 250px;
+    }
+
+    .text_riski_24 {
+        font-size: 24px;
+        padding-left: 25px;
+    }
+
+    .fon_riski {
+        max-height: 100%;
+        height: 100%;
+
+    }
+
+    .fon_riski_intro {
+        max-width: 720px;
+    }
+
+    .text_riski_16 {
+        font-size: 15px;
+    }
+
+    .riski_banner_white {
+        height: 100px;
+        padding: 15px;
+    }
+
+    .riski_text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 740px) {
+    .flex_m {
+        width: 100%;
+        max-width: 710px;
+    }
+
+}
+
+@media (max-width: 721px) {
+    .flex_m {
+        max-width: 690px;
+
+    }
+}
+
+@media (max-width: 670px) {
+    .flex_m {
+        max-width: 640px;
+    }
+
+    .row-flex, .row-flex2 {
+        max-width: 640px;
+    }
+
+    .form_banner_title {
+        font-size: 13px;
+    }
+
+    .form_banner_subtitle_black {
+           font-size: 12px;
+    }
+    .col_anketa {
+         padding: 0px 0px;
+        max-width: 320px;
+    }
+    .img_anketa {
+        position: relative;
+    top: -19px;
+    padding-right: 0px;
+    height: 180px;
+}
+    .border_radius {
+        max-width: 630px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .flex_m {
+        max-width: 530px;
+    }
+
+    .form_banner {
+        max-width: 720px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .form_button {
+        padding: 0 0 10px 0;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .form_banner_white {
+        max-width: 510px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .flex-item_1 {
+        flex: 1 1 250px;
+        min-width: 220px;
+        max-width: 270px;
+        align-content: end;
+        align-self: center;
+    }
+
+    .girl_top {
+        padding-left: 0;
+        top: 3px;
+    }
+
+    .flex-item_2 {
+        max-width: 450px;
+        text-align: center;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    .riski_intro {
+        width: 100%;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .flex-col {
+        width: 100%;
+    }
+
+    .riski_intro_2 {
+        gap: 20px;
+        max-width: 690px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 320px;
+        font-size: 26px;
+    }
+
+    .img_anketa {
+        position: relative;
+        top: 19px;
+        padding-right: 50px;
+        height: 100%;
+    }
+
+    .border_radius {
+        max-width: 510px;
+    }
+
+    .row-flex-footer {
+        max-width: 342px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .footer_top {
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .flex_m {
+        max-width: 510px;
+    }
+}
+
+@media (max-width: 431px) {
+    .flex_m {
+        max-width: 400px;
+    }
+
+    .banner_title {
+        font-size: 30px;
+    }
+
+    .height_200 {
+        height: 100px;
+    }
+
+    .flex-item {
+        flex: 1 1 150px;
+        min-width: 140px;
+        max-width: 150px;
+    }
+
+    .item_tip_viz {
+        flex: 1 1 250px;
+        min-width: 240px;
+        max-width: 250px;
+        padding: 0 20px;
+    }
+
+    .tip_viz_img {
+        max-width: 250px;
+    }
+
+    .form_banner {
+        max-width: 300px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .form_banner_img {
+        align-items: center;
+    }
+
+    .form_banner_subtitle, .form_banner_title {
+        text-align: center;
+    }
+
+    .form_button {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .form_banner_white {
+        max-width: 430px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .riski_intro {
+        width: 100%;
+        max-width: 300px;
+        flex-direction: column;
+    }
+
+    .flex-col {
+        width: 100%;
+    }
+
+    .riski_intro_2 {
+        gap: 20px;
+        max-width: 690px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .price {
+        max-width: 430px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .price_item {
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .banner_blue, .banner_yellow {
+        max-width: 400px;
+        height: 100%;
+        padding: 15px 0;
+        max-height: 800px;
+    }
+
+    .col {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .text_banner_big {
+        font-size: 36px;
+    }
+
+    .img_blue_banner {
+        max-width: 225px;
+        top: 18px;
+        left: 40px;
+    }
+
+    .text_banner_yellow_big {
+        max-width: 380px;
+        font-size: 28px;
+    }
+
+    .img_yellow_banner {
+        top: 17px;
+        max-width: 225px;
+        left: 175px;
+
+    }
+
+    .row-flex, .row-flex2 {
+        max-width: 430px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .row-gap-40 {
+        column-gap: 0px;
+    }
+
+    .form_banner_suptitle {
+        font-size: 22px;
+        text-align: center;
+    }
+    .girl_top {
+        padding-left: 0;
+        top: 22px;
+    }
+    .img_anketa {
+        top: 20px;
+    }
+
+    .button-header {
+        padding: 5px 30px;
+    }
+
+    .border_radius {
+        max-width: 410px;
+    }
+
+    .row-flex-footer {
+        max-width: 342px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .footer_top {
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    .politica {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 415px) {
+    .flex_m {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 391px) {
+    .flex_m {
+        max-width: 360px;
+    }
+
+    .nav_m {
+        max-width: 390px;
+    }
+
+    .flex_m {
+        max-width: 335px;
+    }
+
+    .advantage {
+        width: 243px;
+    }
+}
+
+@media (max-width: 345px) {
+    .banner_title {
+        font-size: 26px;
+    }
+
+    .flex_m {
+        max-width: 310px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
 }
