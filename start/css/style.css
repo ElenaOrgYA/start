@@ -433,6 +433,25 @@ li:hover .caret,
 .nav_link:hover .caret {
     transform: rotate(0deg);
 }
+.caret2 {
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+
+}
+
+li:hover .caret2,
+.nav_link:hover .caret {
+    transform: rotate(-90deg);
+}
 
 .social {
     font-size: 12px;
@@ -1715,7 +1734,7 @@ li:hover .caret,
     .nav_m.active .mobile_nav {
         display: block;
         overflow: auto;
-        max-height: 100vh;
+       height: 100vh;
     }
 
     .nav_ul li {
@@ -1776,6 +1795,7 @@ li:hover .caret,
 
     .nav_link {
         padding: 1em;
+        font-weight: 500;
 
     }
 
